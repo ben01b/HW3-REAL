@@ -25,6 +25,8 @@ void ReverseArray(int arr[], int length)
 
 bool HasBalancedParentheses(std::string input)
 {
+  if(input[0] == ')')
+    return false; 
   int open_count = 0;
   for(int i = 0; i < input.size(); i++)
   {
