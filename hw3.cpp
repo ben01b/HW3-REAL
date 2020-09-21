@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 #include "hw3.h"
 
 /****
@@ -42,9 +43,16 @@ bool HasBalancedParentheses(std::string input)
     return false;
 }
 
-bool inDogish(std::string word)
+bool InXish(std::string word, std::string x)
 {
 
+}
+
+bool InDogish(std::string word)
+{
+  std::string dog = "dog";
+  for(int i = 0; i < 3; i++)
+    return DogishHelper(word, dog[i]);
 }
 
 /****
@@ -61,11 +69,12 @@ bool DogishHelper(std::string word, char letter)
 
   if(word[0] == letter)
   {
-     ///COMPLETE THIS TO HELP WITH RECURSION SETUP 
-     return 0;
+    if(letter == 'd')
+      return DogishHelper(word.substr(1), 'o');
+    else if(letter == 'o')
+      return DogishHelper(word.substr(1), 'g');
+    else
+      return true;
   } 
-  else
-  {
-    return DogishHelper(word.substr(1,word.length()), letter);
-  }
+  return false;
 }
