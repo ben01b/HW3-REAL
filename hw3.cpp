@@ -76,5 +76,4 @@ bool DogishHelper(std::string word, char letter)
     else
       return true;
   } 
-  return false;
 }
