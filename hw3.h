@@ -4,6 +4,8 @@
 
 void ReverseArray(int arr[], int length);
 bool HasBalancedParentheses(std::string input);
+bool InXish(std::string word, std::string x);
+bool XishHelper(std::string word, char letter);
 bool inDogish(std::string word);
 bool DogishHelper(std::string word, char letter);
 

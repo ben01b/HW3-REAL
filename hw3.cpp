@@ -14,6 +14,7 @@ void ReverseArray(int arr[], int length)
 {
   int start = 0;
   int end = length - 1;
+
   while (start < end)
     {
       int temp = arr[start]; 
@@ -28,6 +29,7 @@ bool HasBalancedParentheses(std::string input)
 {
   if(input[0] == ')')
     return false; 
+
   int open_count = 0;
   for(int i = 0; i < input.size(); i++)
   {
@@ -45,7 +47,19 @@ bool HasBalancedParentheses(std::string input)
 
 bool InXish(std::string word, std::string x)
 {
+  for(int i = 0; i < x.size(); i++)
+      return XishHelper(word, x[i]);
+}
 
+bool XishHelper(std::string word, char letter)
+{
+  if(word == "")
+  return false;
+
+  if(word[0] == letter)
+    return true;
+  else
+    return XishHelper(word.substr(1), letter);
 }
 
 bool InDogish(std::string word)

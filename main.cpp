@@ -21,7 +21,12 @@ int main() {
     std::cout << "Balanced" << std::endl;
   else
     std::cout << "Not balanced" << std::endl;
-
+  
+  bool result = InXish("tree", "ree");
+  if(result == true)
+    std::cout << "In XISH!" << std::endl;
+  else
+    std::cout << "Not in XISH!" << std::endl;
 //Test HasBalancedParentheses();
  /*std::string statement1 = "((())())";
  If(HasBalancedParentheses(statement1)){
