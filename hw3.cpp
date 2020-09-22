@@ -70,7 +70,11 @@ bool InXish(std::string word, std::string x)
 
 /****
 * PSEUDOCODE:
-* 
+* if word is blank return false
+* if first letter of word is letter
+* return true
+* else return XishHelper(word - first index, 
+* letter)
 */
 bool XishHelper(std::string word, char letter)
 {
@@ -85,7 +89,7 @@ bool XishHelper(std::string word, char letter)
 
 /****
 * PSEUDOCODE:
-*
+* uses InXish with x being dog
 */
 bool InDogish(std::string word)
 {
@@ -98,23 +102,14 @@ bool InDogish(std::string word)
 */
 bool DogishHelper(std::string word, char letter)
 {
-  if(word == "")
-  {
-  return false;
-  }
-  std::cout << word << std::endl;
-
-  if(word[0] == letter)
-  {
-    if(letter == 'd')
-      return DogishHelper(word.substr(1), 'o');
-    else if(letter == 'o')
-      return DogishHelper(word.substr(1), 'g');
-    else
-      return true;
-  } 
-  else 
-  {
-    return DogishHelper(word.substr(1,word.length()), letter);
-  }
+  if(word == "") {
+ return false;
+    }
+    std::cout << word << std::endl;
+ if(word[0] == letter) {
+     ///COMPLETE THIS TO HELP WITH RECURSION SETUP 
+ 
+    } else {
+ return DogishHelper(word.substr(1,word.length()), letter);
+    }
 }
