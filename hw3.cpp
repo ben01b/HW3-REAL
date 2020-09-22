@@ -89,7 +89,9 @@ bool XishHelper(std::string word, char letter)
 */
 bool InDogIsh(std::string word)
 {
-  return InXish(word, "dog");
+  std::string dog = "dog";
+  for(int i = 0; i < 3; i++)
+    return DogishHelper(word, dog[i]);
 }
 
 /****
