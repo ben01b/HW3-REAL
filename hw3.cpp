@@ -25,6 +25,18 @@ void ReverseArray(int arr[], int length)
     } 
 }
 
+/****
+* PSEUDOCODE:
+* if the first char is a closing paren return
+* false
+* for i to size of input
+* if input[i] is ( increment count
+* else if input[i] i ) decrement count
+* if count == 0 
+* return true
+* else 
+* return false
+*/
 bool HasBalancedParentheses(std::string input)
 {
   if(input[0] == ')')
@@ -45,12 +57,21 @@ bool HasBalancedParentheses(std::string input)
     return false;
 }
 
+/****
+* PSEUDOCODE:
+* for i to size of x
+* return XishHelper(word, x[i])
+*/
 bool InXish(std::string word, std::string x)
 {
   for(int i = 0; i < x.size(); i++)
       return XishHelper(word, x[i]);
 }
 
+/****
+* PSEUDOCODE:
+* 
+*/
 bool XishHelper(std::string word, char letter)
 {
   if(word == "")
@@ -62,11 +83,16 @@ bool XishHelper(std::string word, char letter)
     return XishHelper(word.substr(1), letter);
 }
 
+/****
+* PSEUDOCODE:
+*
+*/
 bool InDogish(std::string word)
 {
-  std::string dog = "dog";
+  return InXish(word, "dog")
+  /*std::string dog = "dog";
   for(int i = 0; i < 3; i++)
-    return DogishHelper(word, dog[i]);
+    return DogishHelper(word, dog[i]);*/
 }
 
 /****
