@@ -87,11 +87,11 @@ bool XishHelper(std::string word, char letter)
 * PSEUDOCODE:
 *
 */
-bool InDogIsh(std::string word)
+bool InDogish(std::string word)
 {
   std::string dog = "dog";
   for(int i = 0; i < 3; i++)
-    return DogIshHelper(word, dog[i]);
+    return DogishHelper(word, dog[i]);
 }
 
 /****
