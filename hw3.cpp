@@ -91,12 +91,6 @@ bool InDogIsh(std::string word)
 {
   return InXish(word, "dog");
 }
-bool inDogish(std::string word)
-{
-  std::string dog = "dog";
-  for(int i = 0; i < 3; i++)
-    return DogishHelper(word, dog[i]);
-}
 
 /****
 * PSEUDOCODE:
